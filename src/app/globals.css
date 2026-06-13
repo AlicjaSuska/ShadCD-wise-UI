@@ -64,8 +64,9 @@
    — --grey-100 … --grey-700: neutral grey palette (primitives)
    — --green-brand-100 / 500 / 700: Wise brand green palette (primitives)
    — --background / --foreground: page background and text
-   — --primary / --primary-foreground: primary buttons, links, badges (e.g. Wise green)
-   — --secondary, --muted, --accent: secondary UI surfaces
+   — --primary / --primary-foreground: primary buttons (green-100 bg, green-700 text)
+   — --secondary / --secondary-foreground: secondary buttons (light: green-500 bg, green-700 text)
+   — --muted, --accent: other secondary UI surfaces
    — --border, --input, --ring: borders and focus rings
    — --radius: default border radius (buttons, cards, inputs)
    — --sidebar-*: sidebar-specific colours
@@ -80,7 +81,7 @@
   --grey-700: #0b0c0a;
 
   --green-brand-100: #9ee770;
-  --green-brand-500: #9fe870;
+  --green-brand-500: #e1f8d5;
   --green-brand-700: #163300;
 
   --radius: 0.625rem;
@@ -90,10 +91,15 @@
   --card-foreground: var(--grey-500);
   --popover: var(--grey-100);
   --popover-foreground: var(--grey-500);
+
+  /* Primary button — green-100 bg, green-700 text */
   --primary: var(--green-brand-100);
   --primary-foreground: var(--green-brand-700);
+
+  /* Secondary button — green-500 bg, green-700 text */
   --secondary: var(--green-brand-500);
   --secondary-foreground: var(--green-brand-700);
+
   --muted: var(--grey-200);
   --muted-foreground: var(--grey-400);
   --accent: var(--grey-200);
@@ -117,18 +123,23 @@
   --sidebar-ring: var(--grey-400);
 }
 
-/* DESIGNER: Dark mode — add class "dark" to <html> to enable; these vars override :root in dark mode */
-.dark {
+/* DESIGNER: Dark mode — add class "dark" to <html> to enable; these vars override :root */
+:root.dark {
   --background: var(--grey-600);
   --foreground: var(--grey-100);
   --card: var(--grey-500);
   --card-foreground: var(--grey-100);
   --popover: var(--grey-500);
   --popover-foreground: var(--grey-100);
+
+  /* Primary button — green-100 bg, green-700 text (same as light) */
   --primary: var(--green-brand-100);
   --primary-foreground: var(--green-brand-700);
+
+  /* Secondary button — green-700 bg, green-500 text */
   --secondary: var(--green-brand-700);
   --secondary-foreground: var(--green-brand-500);
+
   --muted: var(--grey-400);
   --muted-foreground: var(--grey-300);
   --accent: var(--grey-400);

@@ -49,21 +49,12 @@ export default function Home() {
           <Button size="sm" variant="default">
             Send money
           </Button>
-          <Button size="sm" variant="default">
+          <Button size="sm" variant="secondary">
             Add money
           </Button>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button size="sm" variant="outline" className="gap-1">
-                Request
-                <ChevronDown className="size-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              <DropdownMenuItem>Request from bank account</DropdownMenuItem>
-              <DropdownMenuItem>Request from card</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Button size="sm" variant="secondary">
+            Request
+          </Button>
         </div>
       </section>
 
