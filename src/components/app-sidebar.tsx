@@ -14,6 +14,7 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -24,15 +25,21 @@ import {
  * — Flat list only: Home, Cards, Transactions, Payments, Recipients, Insights (no sub-navigation).
  * — To restyle: edit className on Sidebar, or override --sidebar-* in globals.css
  */
+const navItemClassName = "h-auto rounded-full px-4 py-3"
+
 export function AppSidebar() {
   return (
-    <Sidebar className="border-r border-sidebar-border">
-      <SidebarContent>
-        <SidebarGroup>
+    <Sidebar className="group-data-[side=left]:border-r-0 group-data-[side=right]:border-l-0">
+      <SidebarHeader className="mt-16 mb-6 flex items-center justify-center p-0">
+        {/* DESIGNER: Replace with your logo asset or SVG; Wise uses green "WISE" wordmark */}
+        <span className="text-3xl font-bold text-primary">WISE</span>
+      </SidebarHeader>
+      <SidebarContent className="ml-8">
+        <SidebarGroup className="p-0">
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive>
+                <SidebarMenuButton asChild isActive className={navItemClassName}>
                   <Link href="/" className="flex items-center gap-3">
                     <Home className="size-4" />
                     <span>Home</span>
@@ -40,7 +47,7 @@ export function AppSidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild className={navItemClassName}>
                   <Link href="/" className="flex items-center gap-3">
                     <CreditCard className="size-4" />
                     <span>Cards</span>
@@ -48,7 +55,7 @@ export function AppSidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild className={navItemClassName}>
                   <Link href="/" className="flex items-center gap-3">
                     <List className="size-4" />
                     <span>Transactions</span>
@@ -56,7 +63,7 @@ export function AppSidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild className={navItemClassName}>
                   <Link href="/" className="flex items-center gap-3">
                     <ArrowLeftRight className="size-4" />
                     <span>Payments</span>
@@ -64,7 +71,7 @@ export function AppSidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild className={navItemClassName}>
                   <Link href="/" className="flex items-center gap-3">
                     <Users className="size-4" />
                     <span>Recipients</span>
@@ -72,7 +79,7 @@ export function AppSidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild className={navItemClassName}>
                   <Link href="/" className="flex items-center gap-3">
                     <BarChart3 className="size-4" />
                     <span>Insights</span>

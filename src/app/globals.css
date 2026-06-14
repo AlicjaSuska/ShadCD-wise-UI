@@ -87,7 +87,7 @@
   --radius: 0.625rem;
   --background: var(--grey-100);
   --foreground: var(--grey-500);
-  --card: var(--grey-100);
+  --card: var(--grey-200);
   --card-foreground: var(--grey-500);
   --popover: var(--grey-100);
   --popover-foreground: var(--grey-500);
@@ -113,14 +113,14 @@
   --chart-3: #3d5a80;
   --chart-4: #e9c46a;
   --chart-5: #e76f51;
-  --sidebar: var(--grey-200);
-  --sidebar-foreground: var(--grey-500);
+  --sidebar: var(--background);
+  --sidebar-foreground: var(--foreground);
   --sidebar-primary: var(--grey-500);
   --sidebar-primary-foreground: var(--grey-100);
-  --sidebar-accent: var(--grey-200);
-  --sidebar-accent-foreground: var(--grey-500);
-  --sidebar-border: var(--grey-300);
-  --sidebar-ring: var(--grey-400);
+  --sidebar-accent: var(--muted);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
 }
 
 /* DESIGNER: Dark mode — add class "dark" to <html> to enable; these vars override :root */
@@ -153,14 +153,14 @@
   --chart-3: #e9c46a;
   --chart-4: #a78bfa;
   --chart-5: #f87171;
-  --sidebar: var(--grey-500);
-  --sidebar-foreground: var(--grey-100);
+  --sidebar: var(--background);
+  --sidebar-foreground: var(--foreground);
   --sidebar-primary: var(--grey-200);
   --sidebar-primary-foreground: var(--grey-100);
-  --sidebar-accent: var(--grey-400);
-  --sidebar-accent-foreground: var(--grey-100);
-  --sidebar-border: var(--grey-500);
-  --sidebar-ring: var(--grey-400);
+  --sidebar-accent: var(--muted);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
 }
 
 @layer base {
